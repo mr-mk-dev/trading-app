@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database Connection Settings -->
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/trading</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">Manish@7200</property>
+
+        <!-- JDBC connection pool (optional) -->
+        <property name="hibernate.connection.pool_size">10</property>
+
+        <!-- SQL dialect -->
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+
+        <!-- Show SQL in logs -->
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+
+        <!-- Automatically create/update tables -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- List your annotated classes -->
+        <mapping class="org.manish07.model.User"/>
+        <mapping class="org.manish07.model.EmailVerification"/>
+        <mapping class="org.manish07.model.Stock"/>
+        <mapping class="org.manish07.model.Portfolio"/>
+        <mapping class="org.manish07.model.Order"/>
+        <mapping class="org.manish07.model.BuyOrder"/>
+        <mapping class="org.manish07.model.SellOrder"/>
+        <mapping class="org.manish07.model.Transaction"/>
+    </session-factory>
+</hibernate-configuration>

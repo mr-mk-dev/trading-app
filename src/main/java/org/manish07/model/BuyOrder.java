@@ -1,4 +1,4 @@
 package org.manish07.model;
 
-public class BuyOrder {
+public class BuyOrder extends Order {
 }
